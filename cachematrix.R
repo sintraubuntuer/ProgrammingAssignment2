@@ -8,7 +8,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         # the makeCacheMatrix function  creates a special matrix object
-        # that calculates and 'stores'/caches its inverse for later (more efficient)  use
+        # that can calculate and 'store'/cache its inverse for later (more efficient)  use
 
         
         theMat <- x    # theMat - internal variable that will hold the matrix passed as an argument to the function 
@@ -72,8 +72,8 @@ cacheSolve <- function(x, ...) {
         # starts by looking if the inverse has already been calculated and stored inside the 'x' object
         # and calculates only if necessary
          
-        # uses the getinverse function of the makeCacheMatrix object (passed as an argument) and tests
-        # wether the inverse has already been calculated
+        # uses the getinverse function ( through the 'x' list label 'getinverse') of the makeCacheMatrix object (passed as an argument)
+        #  and tests wether the inverse has already been calculated
         mat <- x$getinverse()      
         if(!is.null(mat)) {         
                 message("getting cached data")
